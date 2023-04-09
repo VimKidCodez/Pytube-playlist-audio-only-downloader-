@@ -28,5 +28,5 @@ for file in os.listdir(folder): # go to file in listed directory folder
     mp4_pa = os.path.join(folder,file)
     mp3_pa = os.path.join(folder,os.path.splitext(file)[0]+'.mp3') # describe to add the fiel to path
     fil = mp.AudioFileClip(mp4_pa) # describe the fiel
-    fil.write_audiofile(mp3_pa) # write the file instead of mp4
+    fil.write_audiofile(mp3_pa) # write the file of mp4
     os.remove(mp4_path) # remove the old mp4 file
