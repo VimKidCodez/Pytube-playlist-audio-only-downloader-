@@ -1,8 +1,6 @@
-from pytube import YouTube
-from pytube import Playlist
-import os
+from pytube import *
+import os , re
 import moviepy.editor as mp
-import re
 
 playlist = Playlist("https://www.youtube.com/playlist?list=PLeg_cM4Xd2vPgSvlBE8CaZFEUutUHIwUU")
 
@@ -29,4 +27,4 @@ for file in os.listdir(folder): # go to file in listed directory folder
     mp3_pa = os.path.join(folder,os.path.splitext(file)[0]+'.mp3') # describe to add the fiel to path
     fil = mp.AudioFileClip(mp4_pa) # describe the fiel
     fil.write_audiofile(mp3_pa) # write the file of mp4
-    os.remove(mp4_path) # remove the old mp4 file
+    os.remove(mp4_pa) # remove the old mp4 file
